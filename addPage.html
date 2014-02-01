@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>addPage</title>
+</head>
+<link href="style/input_areas.css" rel="stylesheet" type="text/css">
+<Link href = "style/headers.css"  rel = "stylesheet" type = "text / css" >
+<link href="style/buttons.css" rel="stylesheet" type="text/css">
+<body>
+<section role="region">
+	<section role="region">
+		<table>
+			<thead>
+				<tr><th colspan="4"></tr>
+		</thead>
+			<tbody>
+				<tr width="100%" align="center">
+					<td> <a href ="index.html"><img src="icons/home2.png" height="58" width="58"></a></td>
+					<td> <a href ="addPage.html"><img src="icons/add2.png" height="58" width="58"></a></td>
+					<td><a href="search.html"><img src="icons/search2.png" height="58" width="58"></a></td>
+					<td><a href="test.html"><img src="icons/list2.png" height="58" width="58"></a></td>
+					<td><img src="icons/settings2.png" height="58" width="58"></td>
+				</tr>			
+			</tbody>
+		</table>
+	</section>
+</section>
+	<form>
+			<fieldset><legend class="action">Medicamento</legend>
+				<p><input type="text" placeholder="Nome" required=""></p>
+				<p>
+					<input type="number" placeholder="Quantidade" required="">
+					<p><select name="Unidade">
+						<option value="mililitros">Mililitros</option>
+						<option value="comprimidos">Comprimidos</option>
+					</select></p>
+				</p>
+				<input type="text" placeholder="Placeholder" value="Some written text" required="">
+				<p><textarea placeholder="Descricao" required=""></textarea></p>
+			</fieldset>
+	<fieldset><!-- <legend class="action">Periodo</legend> -->
+		<section>
+		<p><input type="date" placeholder="Data de Inicio"></p>
+		<p>
+		<a>Duracao:</a> <script>
+				period=["Dias","Semanas", "Meses"];
+				document.write("<select>");
+				for (var i=1; i<31; i++)
+				{
+					document.write("<option value=\""+i+"\">"+i+"</option>");
+				}
+				document.write("</select>");
+				document.write("<select>");
+				for (var i=0, l=period.length; i<l; i++)
+				{
+					document.write("<option value=\""+period[i]+"\">"+period[i]+"</option>");
+				}
+				document.write("</select>");
+				</script>
+		</p>
+		Horario: <input type="time" />
+  </section>
+  </fieldset>
+  <button type="reset">Clear</button>
+</form>
+</body>

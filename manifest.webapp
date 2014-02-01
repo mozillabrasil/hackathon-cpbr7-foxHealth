@@ -1,0 +1,24 @@
+{
+	"name": "foxHealth",
+	"version": "0.1",
+	"description": "A health support app",
+	"launch_path": "/index.html",
+	"permissions":{
+		"storage":{
+			"description": "Required for storing and retrieving notes"
+		},
+    		"desktop-notification":{
+    			"description": "Send notifications"
+    		},
+				"alarms" :   { 
+     				"description" :   "Permit to add alarms" 
+   				} 
+	},
+	"developer":{
+		"name":"Yuri Silva"
+	},
+	"icons":{
+		"60":"/icons/ico_60.png",
+		"128":"/icons/ico_128.png"
+	}
+}

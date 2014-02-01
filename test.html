@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>addPage</title>
+<script type="text/javascript">
+
+var alarm = {
+  date: new Date("Feb 01, 2014 04:35:00"),
+  respectTimezone: 'ignoreTimezone',
+  data: {
+    message: "Do something dude!"
+  }
+};
+
+var request = navigator.mozAlarms.add(alarm.date, alarm.respectTimezone, alarm.data);
+
+request.onsuccess = function () {
+		showNotification();
+}
+
+request.onerror = function () {
+  console.log('operation failed: ' + this.error);
+}
+
+
+// function setAlarm(){
+// 	var myDate  = new Date("Jan 31, 2014 22:36:00");
+
+// // This is arbitrary data pass to the alarm
+// 	var data    = {
+// 		foo: "bar"
+// 	}
+
+// // The "ignoreTimezone" string is what make the alarm ignoring it
+// 	var request = navigator.mozAlarms.add(myDate, "ignoreTimezone", data);
+
+// 	request.onsuccess = function () {
+// 		showNotification();
+// 	};
+
+// 	request.onerror = function () { 
+// 		console.log("An error occurred: " + this.error.name);
+// 	};
+
+
+	function showNotification() {
+		var notification = navigator.mozNotification.createNotification("Alarm setado");
+	notification.show();
+    }
+}
+</script>
+</head>
+<link href="(style/input_areas.css" rel="stylesheet" type="text/css">
+<Link href = "style/headers.css"  rel = "stylesheet" type = "text / css" >
+<body>
+<section role="region">
+	<section role="region">
+		<table>
+			<thead>
+				<tr><th colspan="4"></tr>
+		</thead>
+			<tbody>
+				<tr width="100%" align="center">
+					<td> <a href ="index.html"><img src="icons/home2.png" height="58" width="58"></a></td>
+					<td> <a href ="addPage.html"><img src="icons/add2.png" height="58" width="58"></a></td>
+					<td><a href="search.html"><img src="icons/search2.png" height="58" width="58"></a></td>
+					<td><a href="test.html"><img src="icons/list2.png" height="58" width="58"></a></td>
+					<td><img src="icons/settings2.png" height="58" width="58"></td>
+				</tr>			
+			</tbody>
+		</table>
+	</section>
+</section>
+<p><a href="javascript:setAlarm()">Click here</a> to set the alarm.</p>
+</body>
+</html>

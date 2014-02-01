@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html>
+<head>
+  <title>Desktop Notifications Example</title>
+  <script type="text/javascript">
+    function showNotification() {
+      var notification = navigator.mozNotification.createNotification(
+              "Hey, check this out!", "This is a notification posted by " +
+              "Firefox 4. You should take some action. Right now!");
+      
+      /* watch for events on the notification */
+      
+      notification.onclick = function() {
+        var e = document.createElement("p");
+        e.innerHTML = "<strong>The notification was clicked.</strong>";
+        document.body.appendChild(e);
+      };
+      notification.onclose = function() {
+        var e = document.createElement("p");
+        e.innerHTML = "<strong>The notification was closed.</strong>";
+        document.body.appendChild(e);
+      };
+      
+      /* show the notification */
+      
+      notification.show();
+    }
+  </script>
+</head>
+<Link href = "style/headers.css"  rel = "stylesheet" type = "text / css" >
+  <section role="region">
+    <table>
+      <thead>
+        <tr><th colspan="4"></tr>
+    </thead>
+      <tbody>
+        <tr width="100%" align="center">
+          <td> <a href ="index.html"><img src="icons/home2.png" height="58" width="58"></a></td>
+          <td> <a href ="addPage.html"><img src="icons/add2.png" height="58" width="58"></a></td>
+          <td><a href="search.html"><img src="icons/search2.png" height="58" width="58"></a></td>
+          <td><a href="test.html"><img src="icons/list2.png" height="58" width="58"></a></td>
+          <td><img src="icons/settings2.png" height="58" width="58"></td>
+        </tr>     
+      </tbody>
+    </table>
+  </section>
+  <section role="region">
+  <header>
+    <button><span class="icon icon-back">back</span></button>
+    <menu type="toolbar">
+      <button><span class="icon icon-user">user</span></button>
+    </menu>
+    <form action="#">
+      <input type="text" placeholder="search" required="required">
+      <button type="reset">Remove text</button>
+    </form>
+  </header>
+</section>
+<body>
+</body>
+</html>
